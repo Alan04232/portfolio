@@ -105,7 +105,7 @@ section{padding:6rem 4rem}
 .skill-cat-title{font-family:'Share Tech Mono',monospace;font-size:.72rem;color:var(--amber);letter-spacing:.15em;margin-bottom:1.5rem;display:flex;align-items:center;gap:.6rem}
 .skill-cat-title::before{content:'//';color:var(--muted)}
 .skill-item{margin-bottom:1.1rem}
-.skill-name{display:flex;justify-content:space-between;font-size:.82rem;margin-bottom:.4rem;color:var(--text)}
+.skill-name{display:flex;justify-content:space-between;font-size:.82rem;margin-bottom:.4rem;color: #ffFFcc}
 .skill-pct{font-family:'Share Tech Mono',monospace;font-size:.7rem;color:var(--muted)}
 .skill-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem}
 .tag{background:rgba(0,229,255,.06);border:1px solid rgba(0,229,255,.15);color:var(--cyan);font-family:'Share Tech Mono',monospace;font-size:.65rem;padding:.3rem .7rem;letter-spacing:.05em}
@@ -131,20 +131,6 @@ section{padding:6rem 4rem}
 .proj-link{font-family:'arial',monospace;font-size:.68rem;color:grey;letter-spacing:.1em;text-decoration:none;align-items:center;gap:.4rem;transition:.3s}
 .proj-link:hover{color:var(--cyan)}
 .proj-link::after{content:'→'}
-
-/* CERTIFICATIONS */
-#certifications{background:var(--bg)}
-.certs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem}
-.cert-card{background:var(--card);border:1px solid var(--border);padding:1.5rem;border-radius:4px;transition:.3s;position:relative;overflow:hidden}
-.cert-card::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,var(--cyan),transparent);transform:scaleX(0);transform-origin:left;transition:.4s}
-.cert-card:hover::after{transform:scaleX(1)}
-.cert-card:hover{border-color:rgba(0,229,255,.3);transform:translateY(-3px)}
-.cert-icon{font-size:1.8rem;margin-bottom:1rem}
-.cert-title{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:600;color:#fff;margin-bottom:.4rem}
-.cert-issuer{font-family:'Share Tech Mono',monospace;font-size:.68rem;color:var(--cyan);letter-spacing:.08em;margin-bottom:.5rem}
-.cert-status{display:inline-block;font-family:'Share Tech Mono',monospace;font-size:.6rem;padding:.2rem .6rem;border-radius:20px;letter-spacing:.08em}
-.cert-status.completed{background:rgba(57,255,138,.08);border:1px solid rgba(57,255,138,.25);color:var(--green)}
-.cert-status.progress{background:rgba(255,176,32,.08);border:1px solid rgba(255,176,32,.25);color:var(--amber)}
 
 /* RESUME */
 #resume{background:var(--bg2)}
@@ -338,38 +324,34 @@ while(true){<br>
 
     <div class="skill-cat reveal">
       <div class="skill-cat-title">Programming Languages</div>
-      <div class="skill-item"><div class="skill-name"><span>C</span></div><div class="skill-bar"><div class="skill-fill" data-w="90"></div></div></div>
-      <div class="skill-item"><div class="skill-name"><span>C++</span></div><div class="skill-bar"><div class="skill-fill" data-w="82"></div></div></div>
-      <div class="skill-item"><div class="skill-name"><span>Python</span></div><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div></div>
+      <div class="skill-item"><div class="skill-name"><span>C</span><span style="color: #778899;">Intermidiate</span></div><div class="skill-bar"><div class="skill-fill" data-w="90"></div></div></div>
+      <div class="skill-item"><div class="skill-name"><span>C++</span><span style="color: #778899;">Beginner</span></div><div class="skill-bar"><div class="skill-fill" data-w="82"></div></div></div>
+      <div class="skill-item"><div class="skill-name"><span>Python</span><span style="color: #778899;">Intermidiate</span></div><div class="skill-bar"><div class="skill-fill" data-w="85"></div></div></div>
     </div>
 
     <div class="skill-cat reveal">
       <div class="skill-cat-title">Embedded Systems</div>
-      <div class="skill-item"><div class="skill-name"><span>ESP32</span></div><div class="skill-bar"><div class="skill-fill amber" data-w="88"></div></div></div>
-      <div class="skill-item"><div class="skill-name"><span>Arduino</span></div><div class="skill-bar"><div class="skill-fill amber" data-w="85"></div></div></div>
-      <div class="skill-item"><div class="skill-name"><span>ESP-NOW / RF Comm</span></div><div class="skill-bar"><div class="skill-fill amber" data-w="75"></div></div></div>
-      <div class="skill-item"><div class="skill-name"><span>IoT Protocols</span></div><div class="skill-bar"><div class="skill-fill amber" data-w="78"></div></div></div>
+      <div class="skill-item"><div class="skill-name"><span>ESP32</span><span style="color:#778899 ;">intermidiate</span></div><div class="skill-bar"><div class="skill-fill amber" data-w="88"></div></div></div>
+      <div class="skill-item"><div class="skill-name"><span>Arduino / ESP32</span><span style="color: #778899;">intermidiate</span></div><div class="skill-bar"><div class="skill-fill amber" data-w="85"></div></div></div>
+      <div class="skill-item"><div class="skill-name"><span>ESP-NOW / RF Comm</span><span style="color: #778899;">intermidiate</span></div><div class="skill-bar"><div class="skill-fill amber" data-w="75"></div></div></div>
+      <div class="skill-item"><div class="skill-name"><span>IoT Device</span><span style="color: #778899;">intermidiate</span></div><div class="skill-bar"><div class="skill-fill amber" data-w="78"></div></div></div>
     </div>
 
     <div class="skill-cat reveal">
       <div class="skill-cat-title">AI / Machine Learning</div>
-      <div class="skill-item"><div class="skill-name"><span>Scikit-learn</span></div><div class="skill-bar"><div class="skill-fill green" data-w="78"></div></div></div>
-      <div class="skill-item"><div class="skill-name"><span>Data Processing</span></div><div class="skill-bar"><div class="skill-fill green" data-w="80"></div></div></div>
-      <div class="skill-item"><div class="skill-name"><span>Flask API</span></div><div class="skill-bar"><div class="skill-fill green" data-w="75"></div></div></div>
-      <div class="skill-item"><div class="skill-name"><span>Pandas / NumPy</span></div><div class="skill-bar"><div class="skill-fill green" data-w="72"></div></div></div>
+      <div class="skill-item"><div class="skill-name"><span>Scikit-learn</span><span style="color: #778899;">intermidiate</span></div><div class="skill-bar"><div class="skill-fill green" data-w="78"></div></div></div>
+      <div class="skill-item"><div class="skill-name"><span>Data Processing</span><span style="color: #778899;">intermidiate</span></div><div class="skill-bar"><div class="skill-fill green" data-w="80"></div></div></div>
+      <div class="skill-item"><div class="skill-name"><span>Flask API</span><span style="color: #778899;">intermidiate</span></div><div class="skill-bar"><div class="skill-fill green" data-w="75"></div></div></div>
+      <div class="skill-item"><div class="skill-name"><span>Pandas / NumPy</span><span style="color: #778899;">intermidiate</span></div><div class="skill-bar"><div class="skill-fill green" data-w="72"></div></div></div>
+      <div class="skill-item"><div class="skill-name"><span>HTML / CSS </span><span style="color: #778899;">intermidiate</span></div><div class="skill-bar"><div class="skill-fill green" data-w="72"></div></div></div>
     </div>
 
     <div class="skill-cat reveal">
       <div class="skill-cat-title">Tools & Web Tech</div>
-      <div class="skill-tags">
-        <span class="tag">Git / GitHub</span>
-        <span class="tag">Linux</span>
-        <span class="tag">VS Code</span>
-        <span class="tag">Arduino IDE</span>
-        <span class="tag">Wokwi</span>
-        <span class="tag">HTML / CSS</span>
-        <span class="tag">PCB Design</span>
-      </div>
+      <div class="skill-item"><div class="skill-name"><span>Git / GitHub</span><span style="color: #778899;">intermidiate</span></div><div class="skill-bar"><div class="skill-fill green" data-w="78"></div></div></div>
+      <div class="skill-item"><div class="skill-name"><span>Linux</span><span style="color: #778899;">intermidiate</span></div><div class="skill-bar"><div class="skill-fill green" data-w="80"></div></div></div>
+      <div class="skill-item"><div class="skill-name"><span>Wokwi</span><span style="color: #778899;">intermidiate</span></div><div class="skill-bar"><div class="skill-fill green" data-w="75"></div></div></div>
+      <div class="skill-item"><div class="skill-name"><span>PCB Design</span><span style="color: #778899;">intermidiate</span></div><div class="skill-bar"><div class="skill-fill green" data-w="72"></div></div></div>
     </div>
 
   </div>
@@ -441,34 +423,7 @@ while(true){<br>
   </div>
 </section>
 
-<!-- CERTIFICATIONS -->
-<section id="certifications">
-  <div class="section-tag reveal">Credentials</div>
-  <h2 class="section-title reveal"><span>Certifications</span> & Training</h2>
-  <div class="section-line reveal"></div>
-  <div class="certs-grid">
-    <div class="cert-card reveal">
-      <div class="cert-icon">🔬</div>
-      <div class="cert-title">Embedded Systems Design</div>
-    </div>
-    <div class="cert-card reveal">
-      <div class="cert-icon">🤖</div>
-      <div class="cert-title">Machine Learning with Python</div>
-    </div>
-    <div class="cert-card reveal">
-      <div class="cert-icon">🛠️</div>
-      <div class="cert-title">IoT & ESP32 Workshop</div>
-    </div>
-    <div class="cert-card reveal">
-      <div class="cert-icon">🐧</div>
-      <div class="cert-title">Linux Administration</div>
-    </div>
-    <div class="cert-card reveal">
-      <div class="cert-icon">📡</div>
-      <div class="cert-title">PCB Design</div>
-    </div>
-  </div>
-</section>
+
 
 <!-- RESUME -->
 <section id="resume">
@@ -516,8 +471,8 @@ while(true){<br>
     <div class="resume-actions reveal">
       <h3>Download My Resume</h3>
       <p>Full CV including academic history, project documentation, technical skills, and certifications — ready for recruiters and internship applications.</p>
-      <a href="#" class="btn btn-primary" style="display:inline-flex;margin-bottom:1rem">↓ Download PDF</a>
-      <a href="#" class="btn btn-outline" style="display:inline-flex">View GitHub →</a>
+      <a href="https://drive.google.com/file/d/1pd7SqUnJSOu9PNnf8x-crBsKntOHCqI_/view?usp=sharing" class="btn btn-primary" style="display:inline-flex;margin-bottom:1rem">↓ Download PDF</a>
+      <a href="https://github.com/Alan04232" class="btn btn-outline" style="display:inline-flex">View GitHub →</a>
 
       <div style="margin-top:3rem">
         <div class="section-tag" style="margin-bottom:1.5rem">Academic Timeline</div>
