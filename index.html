@@ -181,6 +181,31 @@
   .proj-links a { color: var(--primary); text-decoration: none; font-weight: 600; font-size: 0.9rem; display: inline-flex; align-items: center; gap: 0.3rem;}
   .proj-links a:hover { text-decoration: underline; }
 
+  /* Certifications */
+  .certificates-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .certificate-card { display: flex; flex-direction: column; }
+  .certificate-body { padding: 0; display: flex; flex-direction: column; flex: 1; }
+  .certificate-meta { display: flex; justify-content: space-between; gap: 0.75rem; color: var(--primary); margin-bottom: 0.75rem; }
+  .certificate-title { font-size: 1.1rem; line-height: 1.35; margin-bottom: 0.5rem; }
+  .certificate-issuer, .certificate-description { color: var(--text-muted); font-size: 0.9rem; }
+  .certificate-issuer { margin-bottom: 0.75rem; }
+  .certificate-description { margin-top: auto; }
+
+  /* Certificate lightbox */
+  .certificate-modal { position: fixed; inset: 0; z-index: 2000; display: none; padding: 2rem; background: rgba(2, 6, 23, 0.92); }
+  .certificate-modal.is-open { display: flex; align-items: center; justify-content: center; }
+  .certificate-modal-content { position: relative; width: min(1100px, 100%); height: min(90vh, 850px); display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+  .certificate-modal-media { width: 100%; height: 100%; min-height: 0; display: flex; align-items: center; justify-content: center; }
+  .certificate-modal-media img, .certificate-modal-media iframe { max-width: 100%; width: 100%; height: 100%; object-fit: contain; border: 0; background: #fff; }
+  .certificate-modal-close, .certificate-modal-nav { position: absolute; z-index: 1; border: 1px solid var(--border); background: var(--bg-card); color: var(--text-main); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: 0.3s; }
+  .certificate-modal-close { top: -0.75rem; right: -0.75rem; width: 42px; height: 42px; border-radius: 50%; font-size: 1.5rem; }
+  .certificate-modal-nav { top: 50%; width: 44px; height: 44px; border-radius: 50%; font-size: 1.5rem; transform: translateY(-50%); }
+  .certificate-modal-prev { left: -1.5rem; }
+  .certificate-modal-next { right: -1.5rem; }
+  .certificate-modal-close:hover, .certificate-modal-nav:hover { border-color: var(--primary); color: var(--primary); }
+  .certificate-modal-caption { color: #f8fafc; text-align: center; max-width: 80%; }
+  body.modal-open { overflow: hidden; }
+
   /* Resume Timeline */
   .timeline { border-left: 2px solid var(--border); padding-left: 2rem; margin-top: 2rem; transition: border-color 0.4s ease;}
   .tl-item { position: relative; margin-bottom: 2.5rem; }
@@ -219,12 +244,18 @@
   /* Responsive */
   @media (max-width: 900px) {
     .bento-grid { grid-template-columns: 1fr; }
+    .certificates-grid { grid-template-columns: repeat(2, 1fr); }
     .about-main, .about-side { grid-column: span 1; }
     .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
     .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
   }
   @media (max-width: 600px) {
     .nav-links { display: none; }
+    .certificates-grid { grid-template-columns: 1fr; }
+    .certificate-modal { padding: 1rem; }
+    .certificate-modal-prev { left: 0.5rem; }
+    .certificate-modal-next { right: 0.5rem; }
+    .certificate-modal-close { top: 0.5rem; right: 0.5rem; }
     section { padding: 6rem 5% 3rem; }
   }
 </style>
@@ -239,6 +270,7 @@
     <ul class="nav-links mono">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#certificates">Certificates</a></li>
       <li><a href="#resume">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -395,6 +427,22 @@
         <a href="#">Details Coming Soon →</a>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- Certifications & Achievements -->
+<section id="certificates">
+  <div class="section-header reveal">
+    <div class="section-tag mono">Credentials</div>
+    <h2 class="section-title">Certifications <span class="gradient-text">& Achievements</span></h2>
+    <p style="color: var(--text-muted); margin-top: 0.75rem;">Continuous learning across embedded systems, AI, robotics, networks, and space technology.</p>
+  </div>
+
+  <div class="certificates-grid">
+    <article class="card certificate-card reveal"><div class="certificate-body"><div class="certificate-meta mono"><span>Internship Training</span><span>2026</span></div><h3 class="certificate-title">Network Management Internship</h3><p class="certificate-issuer">Asianet Satellite Communications Ltd.</p><p class="certificate-description">Completed internship training in the Network Management department from 11 June to 11 July 2026.</p></div></article>
+    <article class="card certificate-card reveal"><div class="certificate-body"><div class="certificate-meta mono"><span>Workshop Participation</span><span>2026</span></div><h3 class="certificate-title">DroneX - One-Day Hands-On Drone Workshop</h3><p class="certificate-issuer">IEEE MTTS SBC GECI and IEEE RAS SBC GECI</p><p class="certificate-description">Participated in the DroneX hands-on drone workshop at Government Engineering College Idukki on 21 February 2026.</p></div></article>
+    <article class="card certificate-card reveal"><div class="certificate-body"><div class="certificate-meta mono"><span>Certificate of Acknowledgment</span><span>2025</span></div><h3 class="certificate-title">Bharatiya Antariksh Hackathon 2025</h3><p class="certificate-issuer">ISRO / Hack2Skill</p><p class="certificate-description">Submitted an idea for the Bharatiya Antariksh Hackathon, contributing to space and technology innovation.</p></div></article>
+    <article class="card certificate-card reveal"><div class="certificate-body"><div class="certificate-meta mono"><span>Internship</span><span>2024</span></div><h3 class="certificate-title">AI & Robotics Internship</h3><p class="certificate-issuer">STEM Robotics International / SRAI Smart Solutions Pvt. Ltd.</p><p class="certificate-description">Completed a 7-day internship in AI and Robotics from 1 July to 7 July 2024.</p></div></article>
   </div>
 </section>
 
@@ -567,6 +615,7 @@
     const newTheme = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
   });
+
 </script>
 
 </body>
